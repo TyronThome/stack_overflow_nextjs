@@ -1,6 +1,6 @@
 import {
   ClerkProvider,
-  SignInButton,
+  // SignInButton,
   SignedIn,
   SignedOut,
 } from "@clerk/nextjs";
@@ -48,9 +48,7 @@ export default function RootLayout({
           }}
         >
           <ThemeProvider>
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
+            <SignedOut>{/* <SignInButton /> */}</SignedOut>
             <SignedIn></SignedIn>
             {children}
           </ThemeProvider>
