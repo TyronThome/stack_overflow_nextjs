@@ -45,6 +45,8 @@ const QuestionCard = ({
             </h3>
           </Link>
         </div>
+
+        {/* If signed in add edit delete actions */}
       </div>
 
       <div className="mt-3.5 flex flex-wrap gap-2">
@@ -55,33 +57,34 @@ const QuestionCard = ({
 
       <div className="flex-between mt-6 w-full flex-wrap gap-3">
         <Metric
-          imgUrl="assets/icons/avatar.svg"
-          alt="User"
+          imgUrl="/assets/icons/avatar.svg"
+          alt="user"
           value={author.name}
           title={` - asked ${getTimestamp(createdAt)}`}
           href={`/profile/${author._id}`}
           isAuthor
           textStyles="body-medium text-dark400_light700"
         />
+
         <Metric
-          imgUrl="assets/icons/like.svg"
+          imgUrl="/assets/icons/like.svg"
           alt="Upvotes"
           value={formatAndDivideNumber(upvotes)}
-          title="Votes"
+          title=" Votes"
           textStyles="small-medium text-dark400_light800"
         />
         <Metric
-          imgUrl="assets/icons/message.svg"
-          alt="Message"
+          imgUrl="/assets/icons/message.svg"
+          alt="message"
           value={formatAndDivideNumber(answers.length)}
-          title="Answers"
+          title=" Answers"
           textStyles="small-medium text-dark400_light800"
         />
         <Metric
-          imgUrl="assets/icons/eye.svg"
-          alt="Eye"
+          imgUrl="/assets/icons/eye.svg"
+          alt="eye"
           value={formatAndDivideNumber(views)}
-          title="Views"
+          title=" Views"
           textStyles="small-medium text-dark400_light800"
         />
       </div>
