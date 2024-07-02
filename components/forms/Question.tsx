@@ -46,7 +46,6 @@ const Question = ({ mongoUserId }: Props) => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof QuestionsSchema>) {
-    console.log("I am working");
     setIsSubmitting(true);
 
     try {
