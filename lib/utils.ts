@@ -51,3 +51,18 @@ export const formatAndDivideNumber = (number: number): string => {
     return `${number}`;
   }
 };
+
+export const getJoinedDate = (date: Date): string => {
+  if (!date) {
+    // Check if date is undefined
+    return ""; // Or throw an error if a valid date is expected
+  }
+  // Extract the month and year from the Date object
+  const month = date.toLocaleString("default", { month: "long" });
+  const year = date.getFullYear();
+
+  // Create the joined date string (e.g., "September 2023")
+  const joinedDate = `${month} ${year}`;
+
+  return joinedDate;
+};
